@@ -1,3 +1,5 @@
+const { graphql } = require("gatsby");
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,6 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatbsby-plugin-preact`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,6 +30,34 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+
+      resolve: "gatsby-source-graphql",
+      
+      options: {
+      
+      typeName: "WPGraphql",
+      
+      fieldName: "wpcontent",
+      
+      url: "http://cms-films-grzybowinski.local/graphql",
+      
+      },
+      
+    },
+      {
+
+        resolve: `gatsby-plugin-google-fonts`,
+        
+        options: {
+        
+        fonts: [`Roboto`, `Oswald`, 'gatsby-plugin-styled-components'],
+        
+        display: "swap",
+        
+        },
+        
+        }, 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
