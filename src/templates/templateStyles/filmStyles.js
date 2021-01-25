@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   background-color: ${COLORS.BLACK};
   margin-top: 100px;
 
-  .artist-container {
+  .film-container {
     display: flex;
     margin: 3rem auto;
     width: 90%;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
       flex-direction: column;
     }
 
-    .artist-image {
+    .film-image {
       position: relative;
       width: 40vw;
       height: 40vw;
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
         border-bottom: solid 15px ${COLORS.PRIMARY};
       }
 
-      .roles {
+      .genres {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
       }
     }
 
-    .artist-info {
+    .film-info {
       display: flex;
       flex-direction: column;
       width: 60vw;
@@ -115,7 +115,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  .artist-pictures {
+  .film-pictures {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -125,7 +125,7 @@ export const Wrapper = styled.div`
       flex-direction: column;
     }
 
-    .artist-picture {
+    .film-picture {
       width: 28.5vw;
       height: 57vw;
       margin: 0 1vw;

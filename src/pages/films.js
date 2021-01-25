@@ -9,7 +9,7 @@ import {
     BottomEdgeDown,
     BottomEdgeUp,
     Film,
-} from "./pageStyles/pageStyles"
+} from "../pageStyles/pageStyles"
 import {COLORS} from "../constants"
 
 const FilmsPage = () => {
@@ -29,7 +29,7 @@ const FilmsPage = () => {
                 sourceUrl
                 imageFile{
                     childImageSharp{
-                    fluid(quality:100){
+                    fluid(quality:75){
                         ...GatsbyImageSharpFluid_withWebp
                     }
                     }

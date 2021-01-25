@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import {Wrapper, Image, BottomEdgeDown, BottomEdgeUp, Film} from "./pageStyles/pageStyles"
+import {Wrapper, Image, BottomEdgeDown, BottomEdgeUp, Film} from "../pageStyles/pageStyles"
 import {COLORS} from "../constants"
 
 const IndexPage = () => {
@@ -27,7 +27,7 @@ const IndexPage = () => {
         homePageDescription
         homePageFeaturedProducts {
           ... on WPGraphql_Film {
-            id
+            slug
             filmMeta{
               title
               releaseDate
@@ -81,7 +81,7 @@ const IndexPage = () => {
         <h2>Featured Films</h2>
         <div className="film-items">
           {homePageFeaturedProducts.map(({filmMeta, slug})=> (
-            <Film to={`/${slug}`}>
+            <Film to={`/${slug}`}  key={slug}>
 <Image fluid={filmMeta.releasePoster.imageFile.childImageSharp.fluid} altText={filmMeta.releasePoster.altText}/>
 <div className="film-info">
   <p>{filmMeta.title}</p>
