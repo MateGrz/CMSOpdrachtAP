@@ -50,6 +50,7 @@ export const Wrapper = styled.div`
         margin: auto;
         border-bottom: solid 5px white;
         margin-bottom: 1rem;
+        padding-bottom: 1rem;
 
         @media (max-width: ${MEDIA_QUERIES.MEDIUM}) {
           font-size: 1.5rem;
@@ -126,15 +127,15 @@ export const Wrapper = styled.div`
     }
   }
 
-  .artists {
+  .films {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 2rem 5%;
-    background-color: ${({ artistsColor = COLORS.PRIMARY }) =>
-      `${artistsColor}`};
+    background-color: ${({ filmsColor = COLORS.PRIMARY }) =>
+      `${filmsColor}`};
 
     h2 {
       font-family: ${FONT_FAMILIES.TITLE};
@@ -149,7 +150,7 @@ export const Wrapper = styled.div`
       }
     }
 
-    .artist-items {
+    .film-items {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -160,7 +161,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Artist = styled(Link)`
+export const Film = styled(Link)`
   display: flex;
   position: relative;
   width: 22vw;
@@ -178,7 +179,7 @@ export const Artist = styled(Link)`
   &:hover {
     transform: scale(1.05);
 
-    .artist-info {
+    .film-info {
       height: 100%;
       background-color: ${COLORS.TERTIARY + "c0"};
 
@@ -188,7 +189,7 @@ export const Artist = styled(Link)`
     }
   }
 
-  .artist-info {
+  .film-info {
     display: flex;
     flex-direction: column;
     position: absolute;
